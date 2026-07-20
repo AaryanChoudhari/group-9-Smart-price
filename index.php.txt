@@ -1,0 +1,72 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PriceSmart - PHP Version</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">💰 PriceSmart <span style="font-size:10px;background:#2563eb;color:#fff;padding:2px 6px;border-radius:10px">PHP + MySQL</span></div>
+  <div class="search-box"><input id="searchInput" placeholder="Search mobiles, laptops..."><button onclick="searchProducts()">Search</button></div>
+  <div class="nav-links">
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('wishlist')">Wishlist (<span id="wishCount">0</span>)</a>
+    <a href="#" id="loginBtn" onclick="showLogin()"><?php echo isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Login'; ?></a>
+  </div>
+</nav>
+
+<div class="categories">
+  <button class="cat active" onclick="filterCat('All')">All</button>
+  <button class="cat" onclick="filterCat('Mobiles')">Mobiles</button>
+  <button class="cat" onclick="filterCat('Laptops')">Laptops</button>
+  <button class="cat" onclick="filterCat('Headphones')">Headphones</button>
+  <button class="cat" onclick="filterCat('Smartwatch')">Smartwatch</button>
+</div>
+
+<section id="homePage">
+  <div class="hero"><h1>Find Lowest Prices Across Stores</h1><p>Amazon • Flipkart • Croma - Compare & Save (PHP Backend)</p></div>
+  <div id="productGrid" class="grid"></div>
+</section>
+
+<section id="productPage" class="hidden">
+  <button onclick="showPage('home')" style="margin:10px">← Back to Home</button>
+  <div id="productDetail" style="margin:10px"></div>
+  <div style="margin:10px;background:#fff;padding:16px;border-radius:12px">
+    <h3>Price Comparison</h3>
+    <table id="compareTable" style="width:100%"></table>
+  </div>
+  <div style="margin:10px;background:#fff;padding:16px;border-radius:12px">
+    <h3>Price History (Last 30 Days)</h3>
+    <canvas id="priceChart" width="600" height="250"></canvas>
+    <div class="alert-box" style="margin-top:20px;display:flex;gap:10px;align-items:center">
+      <h4>Set Price Alert:</h4>
+      <input id="targetPrice" type="number" placeholder="Enter target price" style="padding:8px;border:1px solid #ccc;border-radius:8px">
+      <button onclick="setAlert()">Notify Me</button>
+    </div>
+  </div>
+</section>
+
+<section id="wishlistPage" class="hidden"><h2 style="padding:20px">Your Wishlist</h2><div id="wishlistGrid" class="grid"></div></section>
+
+<div id="loginModal" class="modal hidden">
+  <div class="modal-content">
+    <h3 id="authTitle">Login</h3>
+    <input id="authName" placeholder="Full Name" class="hidden">
+    <input id="authEmail" placeholder="Email (demo@test.com)">
+    <input id="authPass" type="password" placeholder="Password">
+    <button onclick="handleAuth()">Submit</button>
+    <p onclick="toggleAuth()" style="font-size:13px;color:#2563eb;cursor:pointer">Don't have account? Register / Have account? Login</p>
+    <button onclick="closeLogin()" style="background:#e2e8f0;color:#000">Close</button>
+  </div>
+</div>
+
+<footer style="text-align:center;padding:20px;color:#64748b;font-size:12px">
+  Tech Stack: HTML + CSS + JS (Frontend) | PHP + MySQL (Backend) | Chart.js | XAMPP
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
