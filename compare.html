@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Prices | SmartPrice</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            <h2>💰 SmartPrice</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="compare.html" class="active">Compare</a></li>
+                <li><a href="history.html">Price History</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Title -->
+
+    <section class="hero">
+
+        <h1>Price Comparison</h1>
+
+        <p>Compare prices from different online shopping websites.</p>
+
+    </section>
+
+    <!-- Product Information -->
+
+    <section class="products">
+
+        <div class="product-card">
+
+            <img src="images/iphone.jpg" alt="iPhone 16">
+
+            <h2>Apple iPhone 16</h2>
+
+            <p>128GB | Black</p>
+
+            <p>⭐ 4.8 / 5</p>
+
+        </div>
+
+    </section>
+
+    <!-- Price Comparison Table -->
+
+    <section class="deals">
+
+        <h2>Compare Prices</h2>
+
+        <table>
+
+            <tr>
+                <th>Shopping Site</th>
+                <th>Price</th>
+                <th>Delivery</th>
+                <th>Rating</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>Amazon</td>
+                <td>₹79,999</td>
+                <td>Free</td>
+                <td>⭐4.8</td>
+                <td>
+                    <button>Buy Now</button>
+                </td>
+            </tr>
+
+            <tr style="background:#d4edda;">
+
+                <td><strong>Flipkart</strong></td>
+
+                <td><strong>₹78,999</strong></td>
+
+                <td>Free</td>
+
+                <td>⭐4.7</td>
+
+                <td>
+                    <button>Best Deal</button>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>Croma</td>
+
+                <td>₹80,499</td>
+
+                <td>Free</td>
+
+                <td>⭐4.6</td>
+
+                <td>
+                    <button>Buy Now</button>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>Reliance Digital</td>
+
+                <td>₹79,499</td>
+
+                <td>₹99</td>
+
+                <td>⭐4.5</td>
+
+                <td>
+                    <button>Buy Now</button>
+                </td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- Product Specifications -->
+
+    <section class="features">
+
+        <h2>Product Specifications</h2>
+
+        <div class="feature-container">
+
+            <div class="feature-box">
+                📱
+                <h3>Display</h3>
+                <p>6.3-inch Super Retina XDR OLED</p>
+            </div>
+
+            <div class="feature-box">
+                ⚡
+                <h3>Processor</h3>
+                <p>Apple A18 Chip</p>
+            </div>
+
+            <div class="feature-box">
+                📷
+                <h3>Camera</h3>
+                <p>48MP + 12MP Dual Camera</p>
+            </div>
+
+            <div class="feature-box">
+                🔋
+                <h3>Battery</h3>
+                <p>Up to 22 Hours Video Playback</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Price Alert -->
+
+    <section class="categories">
+
+        <h2>Set Price Alert</h2>
+
+        <p>Enter your target price and we'll notify you when the price drops.</p>
+
+        <br>
+
+        <input
+            type="number"
+            placeholder="Enter Target Price"
+            id="targetPrice">
+
+        <button onclick="setAlert()">
+            🔔 Set Alert
+        </button>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 SmartPrice | Compare Prices & Save Money</p>
+
+        <div class="social">
+
+            <i class="fab fa-facebook"></i>
+
+            <i class="fab fa-instagram"></i>
+
+            <i class="fab fa-twitter"></i>
+
+            <i class="fab fa-linkedin"></i>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
